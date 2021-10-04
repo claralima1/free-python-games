@@ -5,7 +5,7 @@ Exercises
 1. How do you make the snake faster or slower?
 2. How can you make the snake go around the edges?
 3. How would you move the food?
-4. Change the snake to respond to arrow keys.
+4. Change the snake to respond to mouse clicks.
 
 1. Como você deixa a cobra mais rápida ou mais lenta? FEITO
 2. Como você pode fazer a cobra contornar as bordas? 
@@ -13,22 +13,26 @@ Exercises
 4. Mude a cobra para responder às teclas de seta FEITO
 """
 
-from turtle import *
 from random import randrange
+from turtle import *
+
 from freegames import square, vector
 
 food = vector(0, 0) #posição inicial da comida
 snake = [vector(10, 0)]#posição inicial da cobra
 aim = vector(0,-10) # velocidade/direção da cobra
 
+
 def change(x, y):
     "Change snake direction."#"Mudar a direção da cobra."
     aim.x = x
     aim.y = y
 
+
 def inside(head):
     "Return True if head inside boundaries."#"Retorne True se a cabeça estiver dentro dos limites."
     return -200 < head.x < 190 and -200 < head.y < 190
+
 
 def move():
     "Move snake forward one segment." #Mova a cobra um segmento para frente
@@ -57,6 +61,7 @@ def move():
     square(food.x, food.y, 9, 'green')
     update()
     ontimer(move, 100)
+
 
 setup(420, 420, 370, 0)
 hideturtle()

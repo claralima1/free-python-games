@@ -11,10 +11,12 @@ Exercises
 """
 
 from turtle import *
+
 from freegames import line
 
 turns = {'red': 'yellow', 'yellow': 'red'}
 state = {'player': 'yellow', 'rows': [0] * 8}
+
 
 def grid():
     "Draw Connect Four grid."
@@ -30,6 +32,7 @@ def grid():
             dot(40, 'white')
 
     update()
+
 
 def tap(x, y):
     "Draw red or yellow circle in tapped row."
@@ -49,6 +52,7 @@ def tap(x, y):
 
     rows[row] = count + 1
     state['player'] = turns[player]
+
 
 setup(420, 420, 370, 0)
 hideturtle()

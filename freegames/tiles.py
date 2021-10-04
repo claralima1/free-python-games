@@ -11,6 +11,7 @@ Exercises
 
 from random import *
 from turtle import *
+
 from freegames import floor, vector
 
 tiles = {}
@@ -20,6 +21,7 @@ neighbors = [
     vector(0, 100),
     vector(0, -100),
 ]
+
 
 def load():
     "Load tiles and scramble."
@@ -43,6 +45,7 @@ def load():
             tiles[mark] = number
             mark = spot
 
+
 def square(mark, number):
     "Draw white square with black outline and number."
     up()
@@ -63,6 +66,7 @@ def square(mark, number):
 
     write(number, font=('Arial', 60, 'normal'))
 
+
 def tap(x, y):
     "Swap tile and empty square."
     x = floor(x, 100)
@@ -79,11 +83,13 @@ def tap(x, y):
             tiles[mark] = None
             square(mark, None)
 
+
 def draw():
     "Draw all tiles."
     for mark in tiles:
         square(mark, tiles[mark])
     update()
+
 
 setup(420, 420, 370, 0)
 hideturtle()

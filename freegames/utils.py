@@ -3,7 +3,7 @@
 """
 # pylint: disable=no-member
 
-import collections
+import collections.abc
 import math
 import os
 
@@ -48,6 +48,7 @@ def path(filename):
 def line(a, b, x, y):
     "Draw line from `(a, b)` to `(x, y)`."
     import turtle
+
     turtle.up()
     turtle.goto(a, b)
     turtle.down()
@@ -61,6 +62,7 @@ def square(x, y, size, name):
 
     """
     import turtle
+
     turtle.up()
     turtle.goto(x, y)
     turtle.down()
@@ -74,7 +76,7 @@ def square(x, y, size, name):
     turtle.end_fill()
 
 
-class vector(collections.Sequence):
+class vector(collections.abc.Sequence):
     """Two-dimensional vector.
 
     Vectors can be modified in-place.
@@ -88,6 +90,7 @@ class vector(collections.Sequence):
     vector(-2.0, 1.0)
 
     """
+
     # pylint: disable=invalid-name
     PRECISION = 6
 

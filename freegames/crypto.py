@@ -12,6 +12,7 @@ Adapted from code in https://inventwithpython.com/chapter14.html
 
 """
 
+
 def encrypt(message, key):
     "Encrypt message with key."
     result = ''
@@ -29,7 +30,8 @@ def encrypt(message, key):
 
             if letter.isupper():
                 base = ord('A')
-            elif letter.islower():
+            else:
+                assert letter.islower()
                 base = ord('a')
 
             # The encryption equation:
@@ -48,13 +50,16 @@ def encrypt(message, key):
 
     return result
 
+
 def decrypt(message, key):
     "Decrypt message with key."
     return encrypt(message, -key)
 
+
 def decode(message):
     "Decode message without key."
     pass  # TODO
+
 
 def get_key():
     "Get key from user."
@@ -65,6 +70,7 @@ def get_key():
     except:
         print('Invalid key. Using key: 0.')
         return 0
+
 
 print('Do you wish to encrypt, decrypt, or decode a message?')
 choice = input()

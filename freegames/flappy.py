@@ -11,19 +11,23 @@ Exercises
 
 from random import *
 from turtle import *
+
 from freegames import vector
 
 bird = vector(0, 0)
 balls = []
+
 
 def tap(x, y):
     "Move bird up in response to screen tap."
     up = vector(0, 30)
     bird.move(up)
 
+
 def inside(point):
     "Return True if point on screen."
     return -200 < point.x < 200 and -200 < point.y < 200
+
 
 def draw(alive):
     "Draw screen objects."
@@ -41,6 +45,7 @@ def draw(alive):
         dot(20, 'black')
 
     update()
+
 
 def move():
     "Update object positions."
@@ -68,6 +73,7 @@ def move():
 
     draw(True)
     ontimer(move, 50)
+
 
 setup(420, 420, 370, 0)
 hideturtle()

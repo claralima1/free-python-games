@@ -72,16 +72,13 @@ Features
 - Used in hundreds of hours of classroom instruction
 - Fully Documented
 - 100% Test Coverage
-- Developed on Python 3.7
-- Tested on CPython 2.7, 3.4, 3.5, 3.6, and 3.7
-- Tested on Windows, Mac OS X, Raspbian (Raspberry Pi), and Linux
-- Tested using Travis CI and AppVeyor CI
+- Developed on Python 3.9
+- Tested on CPython 3.6, 3.7, 3.8, 3.9
+- Tested on Linux, Mac OS X, and Windows
+- Tested using GitHub Actions
 
-.. image:: https://api.travis-ci.org/grantjenks/free-python-games.svg?branch=master
-    :target: http://www.grantjenks.com/docs/freegames/
-
-.. image:: https://ci.appveyor.com/api/projects/status/github/grantjenks/free-python-games?branch=master&svg=true
-    :target: http://www.grantjenks.com/docs/freegames/
+.. image:: https://github.com/grantjenks/free-python-games/workflows/integration/badge.svg
+   :target: http://www.grantjenks.com/docs/freegames/
 
 
 Quickstart
@@ -337,7 +334,7 @@ References
 Free Python Games License
 -------------------------
 
-Copyright 2017-2020 Grant Jenks
+Copyright 2017-2021 Grant Jenks
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this file except in compliance with the License.  You may obtain a copy of the
