@@ -61,9 +61,8 @@ Testing
 :doc:`Free Python Games <index>` currently tests against three versions of
 Python:
 
-* CPython 3.4
-* CPython 3.5
 * CPython 3.6
+* Cpython 3.7
 
 Testing uses `tox <https://pypi.python.org/pypi/tox>`_. If you don't want to
 install all the development requirements, then, after downloading, you can

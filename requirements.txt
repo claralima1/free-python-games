@@ -2,13 +2,14 @@
 blue
 coverage
 doc8
-flake8
+flake8==3.8.4
 isort
 pylint
 pytest
 pytest-cov
 rstcheck
 sphinx
+docutils==0.14
 tox
 twine
 wheel
